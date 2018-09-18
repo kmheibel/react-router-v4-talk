@@ -27,7 +27,7 @@ class Retail extends Component {
                                     to={"/retail/customerService"}>Customer Service</Button>  */}
                        </Toolbar>
                     </AppBar>
-                    <Route path={'/retail/product/'} component={ProductPage}/>
+                    <Route path={'/retail/product/'} component={ProductPage} productName={"My Test"}/>
                 {/*</MuiThemeProvider>*/}
             </div>
         );

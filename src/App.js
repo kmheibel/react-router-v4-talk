@@ -16,7 +16,7 @@ class App extends Component {
           <BrowserRouter>
               <Switch>
                   <Route path='/' component={Retail}/>
-                  <Route path='/myApp' component={Retail} />
+                  <Route path='/retail' component={Retail} />
               </Switch>
           </BrowserRouter>
       </div>

@@ -12,7 +12,7 @@ class ProductPage extends Component {
             <Fragment>
                 <h1 style={{textAlign: 'center'}}>Products</h1>
                 <div style={{marginRight: '50px', marginLeft: '50px'}}>
-                    <Product/>
+                    <Product productName={"Test in ProductPage"}/>
                 </div>
             </Fragment>
         );
