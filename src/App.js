@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router';
-import {BrowserRouter, Link} from 'react-router-dom';
-import Product from './Product/Product';
+import {BrowserRouter} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Retail from "./Retail/Retail";
 
 class App extends Component {
   render() {
@@ -15,8 +15,8 @@ class App extends Component {
         </header>
           <BrowserRouter>
               <Switch>
-                  <Link to='/myApp'>Certificate List</Link><br />
-                  <Route path='/myApp' component={Product} productName="Test 1"/>
+                  <Route path='/' component={Retail}/>
+                  <Route path='/myApp' component={Retail} />
               </Switch>
           </BrowserRouter>
       </div>

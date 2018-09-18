@@ -5,7 +5,7 @@ class Product extends Component {
 
     constructor(props) {
         super(props);
-        this.productName = props.productName;
+        this.productName = "Test Product";
     }
 
     render() {
