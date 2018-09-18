@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import ProductPage from "../Product/ProductPage";
+import ProductPage from '../Product/ProductPage';
+import CustomerServicePage from '../CustomerService/CustomerServicePage';
 
 class Retail extends Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render() {
@@ -19,21 +19,18 @@ class Retail extends Component {
                 {/*   <MuiThemeProvider theme={theme}> */}
                     <AppBar position="static">
                         <Toolbar style={{alignSelf: 'stretch'}}>
-                            {/*              <Button style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.5em'}} component={Link}
-                                    to={"/"}>Home</Button>  */}
                             <Button style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.5em'}} component={Link}
                                     to={'/retail/product'}>Product</Button>
-                            {/*          <Button style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.5em'}} component={Link}
-                                    to={"/retail/customerService"}>Customer Service</Button>  */}
+                            <Button style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.5em'}} component={Link}
+                                    to={"/retail/customerService"}>Customer Service</Button>
                        </Toolbar>
                     </AppBar>
-                    <Route path={'/retail/product/'} component={ProductPage} productName={"My Test"}/>
+                <Route path={'/retail/customerService/'} component={CustomerServicePage} />
+                <Route path={'/retail/product/'} component={ProductPage} productName={"My Test"} />
                 {/*</MuiThemeProvider>*/}
             </div>
         );
     }
-
-
 }
 
 export default Retail;

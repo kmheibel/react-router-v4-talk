@@ -4,6 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Retail from "./Retail/Retail";
+import CustomerServicePage from "./CustomerService/CustomerServicePage";
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
         </header>
           <BrowserRouter>
               <Switch>
-                  <Route path='/' component={Retail}/>
+                  <Route path='/' component={Retail} />
                   <Route path='/retail' component={Retail} />
               </Switch>
           </BrowserRouter>
