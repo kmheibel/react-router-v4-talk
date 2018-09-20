@@ -5,6 +5,7 @@ class ProductPage extends Component {
 
     constructor(props) {
         super(props);
+        this.productName = props.productName;
     }
 
     render() {
@@ -12,7 +13,7 @@ class ProductPage extends Component {
             <Fragment>
                 <h1 style={{textAlign: 'center'}}>Products</h1>
                 <div style={{marginRight: '50px', marginLeft: '50px'}}>
-                    <Product productName={"Test in ProductPage"}/>
+                    <Product productName={this.productName}/>
                 </div>
             </Fragment>
         );

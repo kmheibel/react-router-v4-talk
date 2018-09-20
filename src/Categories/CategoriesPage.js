@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
-import {Route, Link} from 'react-router-dom';
-import CategoryPage from "../CategoryPage";
+import {Link} from 'react-router-dom';
+
 
 class CategoriesPage extends Component {
 
@@ -12,30 +12,20 @@ class CategoriesPage extends Component {
         return (<Fragment>
                 <h1>Categories</h1>
 
-                <ul>
-                    <li><Link to={'/grocery'}>Grocery</Link></li>
-                    <li><Link to={'/housewares'}>Housewares</Link></li>
-                    <li><Link to={'/apparel'}>Apparel</Link>
-                        <ul>
-                            <li><Link to={'/apparel'}>Mens</Link></li>
-                            <li><Link to={'/apparel'}>Womens</Link></li>
-                            <li><Link to={'/apparel'}>Boys</Link></li>
-                            <li><Link to={'/apparel'}>Girls</Link></li>
+                <ul style={{listStyleType: 'none', textAlign: 'left'}}>
+                    <li><Link to={'/minimart/grocery'}>Grocery</Link></li>
+                    <li><Link to={'/minimart/housewares'}>Housewares</Link></li>
+                    <li><Link to={'/minimart/apparel'}>Apparel</Link>
+                        <ul style={{listStyleType: 'none', textAlign: 'left'}}>
+                            <li><Link to={'/minimart/apparel/mens'}>Mens</Link></li>
+                            <li><Link to={'/minimart/apparel/womens'}>Womens</Link></li>
+                            <li><Link to={'/minimart/apparel/boys'}>Boys</Link></li>
+                            <li><Link to={'/minimart/apparel/girls'}>Girls</Link></li>
                         </ul>
                     </li>
                 </ul>
-                <Route path={'/minimart/grocery/'} component={CategoryPage} category="Grocery"/>
-                <Route path={'/minimart/housewares/'} component={CategoryPage} category="Housewares"/>
-                <Route path={'/minimart/apparel/'} component={CategoryPage} category="Apparel"/>
-                <Route path={'/minimart/apparelmens/'} component={CategoryPage} category="Apparel"/>
-                <Route path={'/minimart/apparelwomens/'} component={CategoryPage} category="Apparel"/>
-                <Route path={'/minimart/apparel/boys'} component={CategoryPage} category="Apparel"/>
-                <Route path={'/minimart/apparel/girls'} component={CategoryPage} category="Apparel"/>
-
-
             </Fragment>
-        )
-            ;
+        );
     }
 }
 
