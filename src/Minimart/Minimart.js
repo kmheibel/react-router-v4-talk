@@ -6,8 +6,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import ProductPage from '../Product/ProductPage';
 import CustomerServicePage from '../CustomerService/CustomerServicePage';
+import CategoriesPage from "../Categories/CategoriesPage";
 
-class Retail extends Component {
+class Minimart extends Component {
 
     constructor(props) {
         super(props);
@@ -20,17 +21,17 @@ class Retail extends Component {
                     <AppBar position="static">
                         <Toolbar style={{alignSelf: 'stretch'}}>
                             <Button style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.5em'}} component={Link}
-                                    to={'/retail/product'}>Product</Button>
+                                    to={'/minimart/categories'}>Categories</Button>
                             <Button style={{color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.5em'}} component={Link}
-                                    to={"/retail/customerService"}>Customer Service</Button>
+                                    to={"/minimart/customerService"}>Customer Service</Button>
                        </Toolbar>
                     </AppBar>
-                <Route path={'/retail/customerService/'} component={CustomerServicePage} />
-                <Route path={'/retail/product/'} component={ProductPage} productName={"My Test"} />
+                <Route path={'/minimart/customerService/'} component={CustomerServicePage} />
+                <Route path={'/minimart/categories/'} component={CategoriesPage} />
                 {/*</MuiThemeProvider>*/}
             </div>
         );
     }
 }
 
-export default Retail;
+export default Minimart;
